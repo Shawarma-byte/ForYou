@@ -141,8 +141,11 @@
   <div class="floating" style="left:88%; animation-delay:3s">💖</div>
 
   <div class="card">
+    <audio id="bgMusic" preload="auto">
+      <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3b2f6b5fbb.mp3" type="audio/mpeg">
+    </audio>
     <h1>Happy Birthday 🎉</h1>
-    <div class="subtitle">Today is about you</div>
+    <div class="subtitle">Today is about you, Ichraak — the birthday girl 🎂</div>
 
     <div class="message">
       I wanted to make something a little special today. Something that smiles back at you the way you do at others.
@@ -164,11 +167,14 @@
 
     <div class="footer" id="surpriseText" style="display:none;">
       I’m really glad I got to know you &lt;3
-    </div>
+        <div class="footer" style="margin-top:32px; font-size:0.9rem; color:#9ca3af;">Made by Idris</div>
   </div>
 
   <script>
     function surprise() {
+      const music = document.getElementById('bgMusic');
+      music.volume = 0.4;
+      music.play();
       const text = document.getElementById('surpriseText');
       text.style.display = 'block';
       text.style.animation = 'reveal 0.8s ease';
